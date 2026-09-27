@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elora Bracelets | Handcrafted Luxury & Everyday Elegance</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FAF7F2',
+              card: '#FFFDF9',
+              rose: '#C99385',
+              roseHover: '#B27D70',
+              gold: '#D4AF37',
+              charcoal: '#1E1B18',
+              muted: '#7A7570',
+              border: '#EBE5DD'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            script: ['"Cormorant Garamond"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF7F2;
+      color: #1E1B18;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8CCC4;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C99385;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-charcoal antialiased flex flex-col min-h-screen">
+
+  <div class="bg-brand-charcoal text-brand-cream text-xs py-2 px-4 text-center tracking-widest uppercase font-medium flex items-center justify-center gap-2">
+    <span>✨ Handcrafted with love in Anna Nagar, Chennai</span>
+    <span class="hidden md:inline">•</span>
+    <span class="hidden md:inline">Instant WhatsApp Ordering & Express Shipping Across India</span>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-brand-border transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" aria-label="Open menu" class="md:hidden p-2 rounded-lg text-brand-charcoal hover:bg-stone-200/50">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Brand Logo -->
+        <div class="flex-shrink-0 text-center md:text-left">
+          <a href="#" class="inline-block">
+            <span class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-brand-charcoal block">Elora Bracelets</span>
+            <span class="text-[10px] tracking-[0.25em] text-brand-rose uppercase block font-semibold">Artisanal Chennai</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+          <a href="#collections" class="text-brand-charcoal hover:text-brand-rose transition">Collections</a>
+          <a href="#bestsellers" class="text-brand-charcoal hover:text-brand-rose transition">Best Sellers</a>
+          <a href="#about" class="text-brand-charcoal hover:text-brand-rose transition">Our Craft</a>
+          <a href="#reviews" class="text-brand-charcoal hover:text-brand-rose transition">Reviews</a>
+          <a href="#contact" class="text-brand-charcoal hover:text-brand-rose transition">Visit & Contact</a>
+        </nav>
+
+        <!-- Action Buttons: WhatsApp & Bag -->
+        <div class="flex items-center space-x-3">
+          <a href="https://wa.me/919384500167?text=Hello%20Elora%20Bracelets,%20I%20would%20like%20to%20inquire%20about%20your%20custom%20handcrafted%20bracelets!" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="hidden sm:inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1eb956] text-white text-xs px-3.5 py-2 rounded-full font-semibold transition shadow-sm">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.312l-.744 2.716 2.79-.731a5.719 5.719 0 0 0 2.697.683h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.78-5.773-5.78zm3.385 8.232c-.14.394-.78.752-1.08.79-.292.037-.665.045-2.02-.516-1.52-.63-2.5-2.185-2.576-2.285-.075-.1-1.01-1.344-1.01-2.563 0-1.218.636-1.817.863-2.062.227-.245.495-.306.66-.306.166 0 .332.002.477.01.155.008.363-.058.568.435.21.503.715 1.745.777 1.872.062.127.104.275.02.438-.083.164-.124.267-.248.411-.124.145-.262.324-.374.436-.124.124-.253.259-.108.508.145.249.646 1.066 1.388 1.726.953.85 1.758 1.114 2.008 1.238.249.124.395.104.54-.062.145-.166.623-.726.789-.974.166-.25.332-.208.56-.124.228.083 1.453.685 1.702.81.249.125.415.187.477.291.062.104.062.602-.078.996z"/>
+            </svg>
+            Chat Now
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button id="cartBtn" class="relative p-2.5 rounded-full bg-stone-100 hover:bg-stone-200 transition text-brand-charcoal" aria-label="Shopping Bag">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span id="cartCount" class="absolute -top-1 -right-1 bg-brand-rose text-white text-[11px] font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-brand-border bg-brand-cream px-4 pt-3 pb-5 space-y-3">
+      <a href="#collections" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Collections</a>
+      <a href="#bestsellers" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Best Sellers</a>
+      <a href="#about" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Our Craft</a>
+      <a href="#reviews" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Reviews</a>
+      <a href="#contact" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Contact & Store</a>
+      <div class="pt-2">
+        <a href="https://wa.me/919384500167" class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] text-white py-2.5 rounded-lg text-sm font-semibold">
+          WhatsApp: +91 93845 00167
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <section class="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Copy -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-rose/10 border border-brand-rose/20 text-brand-rose text-xs font-semibold tracking-wider uppercase">
+              <span>✦ Luxury Jewelry Crafted in Chennai</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-charcoal tracking-tight leading-[1.15]">
+              Stories Woven in <span class="italic text-brand-rose font-normal">Grace & Gold.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-brand-muted max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+              Elevate your everyday style with Elora Bracelets. Handcrafted healing crystal beads, delicate charm cuffs, and bespoke couple bands created right here near Tower Park, Anna Nagar.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="#collections" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-charcoal text-brand-cream hover:bg-brand-rose font-medium text-sm tracking-wide transition-all shadow-md text-center">
+                Explore Collection
+              </a>
+              <a href="https://wa.me/919384500167?text=Hi%20Shalini!%20I%20am%20interested%20in%20custom%20bracelet%20designs%20from%20Elora%20Bracelets." 
+                 target="_blank" 
+                 class="w-full sm:w-auto px-8 py-4 rounded-full border border-brand-charcoal/30 hover:border-brand-charcoal text-brand-charcoal hover:bg-white font-medium text-sm tracking-wide transition flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 fill-green-600" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.312l-.744 2.716 2.79-.731a5.719 5.719 0 0 0 2.697.683h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.78-5.773-5.78zm3.385 8.232c-.14.394-.78.752-1.08.79-.292.037-.665.045-2.02-.516-1.52-.63-2.5-2.185-2.576-2.285-.075-.1-1.01-1.344-1.01-2.563 0-1.218.636-1.817.863-2.062.227-.245.495-.306.66-.306.166 0 .332.002.477.01.155.008.363-.058.568.435.21.503.715 1.745.777 1.872.062.127.104.275.02.438-.083.164-.124.267-.248.411-.124.145-.262.324-.374.436-.124.124-.253.259-.108.508.145.249.646 1.066 1.388 1.726.953.85 1.758 1.114 2.008 1.238.249.124.395.104.54-.062.145-.166.623-.726.789-.974.166-.25.332-.208.56-.124.228.083 1.453.685 1.702.81.249.125.415.187.477.291.062.104.062.602-.078.996z"/></svg>
+                Custom Order on WhatsApp
+              </a>
+            </div>
+
+            <!-- Features Pill List -->
+            <div class="pt-6 grid grid-cols-3 gap-2 border-t border-brand-border/60 max-w-lg mx-auto lg:mx-0">
+              <div class="text-center lg:text-left">
+                <span class="block text-sm font-bold text-brand-charcoal">100% Handcrafted</span>
+                <span class="text-xs text-brand-muted">Artisanal detailing</span>
+              </div>
+              <div class="text-center lg:text-left">
+                <span class="block text-sm font-bold text-brand-charcoal">Custom Sizes</span>
+                <span class="text-xs text-brand-muted">Made to fit you</span>
+              </div>
+              <div class="text-center lg:text-left">
+                <span class="block text-sm font-bold text-brand-charcoal">Pan-India Delivery</span>
+                <span class="text-xs text-brand-muted">Safe packaging</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual Showcase -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-sm lg:max-w-none">
+              <!-- Background subtle glow decoration -->
+              <div class="absolute -top-6 -left-6 w-64 h-64 bg-rose-200/40 rounded-full blur-3xl -z-10"></div>
+              <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-amber-100/60 rounded-full blur-3xl -z-10"></div>
+              
+              <!-- Hero Image Container with luxury border -->
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-white">
+                <img src="https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=900&q=80" 
+                     alt="Elora Luxury Bracelets Showcase" 
+                     class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-stone-200 shadow-sm flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-semibold text-brand-rose uppercase tracking-wider">Spotlight Design</p>
+                    <p class="text-sm font-serif font-bold text-brand-charcoal">Rose Quartz Celestia</p>
+                  </div>
+                  <span class="text-base font-bold text-brand-charcoal">₹799</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="py-16 bg-white border-y border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-rose block mb-2">Curated With Heart</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-charcoal">Our Signature Bracelets</h2>
+          <p class="text-sm sm:text-base text-brand-muted mt-3">From subtle everyday elegance to bold spiritual gemstones, explore designs customized for your wrist.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <button onclick="filterProducts('all')" class="filter-btn active px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-brand-charcoal text-white" data-category="all">
+            All Designs
+          </button>
+          <button onclick="filterProducts('beaded')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-stone-100 text-stone-600 hover:bg-stone-200" data-category="beaded">
+            Natural Gemstones
+          </button>
+          <button onclick="filterProducts('charms')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-stone-100 text-stone-600 hover:bg-stone-200" data-category="charms">
+            Charm Bracelets
+          </button>
+          <button onclick="filterProducts('cuffs')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-stone-100 text-stone-600 hover:bg-stone-200" data-category="cuffs">
+            Minimalist Cuffs
+          </button>
+          <button onclick="filterProducts('couple')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-stone-100 text-stone-600 hover:bg-stone-200" data-category="couple">
+            Couple Sets
+          </button>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="grid grid-cols-2 gap-4">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" 
+                   alt="Handmade jewelry detailing" 
+                   class="rounded-2xl shadow-md h-64 w-full object-cover">
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" 
+                   alt="Natural bracelet beads" 
+                   class="rounded-2xl shadow-md h-64 w-full object-cover mt-8">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200 text-stone-700 text-xs font-semibold uppercase tracking-wider">
+              Artisan Profile
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-charcoal">
+              Handmade with intention, right in the heart of Anna Nagar.
+            </h2>
+            <p class="text-brand-muted leading-relaxed">
+              At <strong class="text-brand-charcoal font-semibold">Elora Bracelets</strong>, Shalini and our team believe jewelry isn’t just an accessory—it is personal energy, confidence, and a reminder of your journey.
+            </p>
+            <p class="text-brand-muted leading-relaxed">
+              Every piece is hand-strung using genuine semi-precious crystals (like Rose Quartz, Amethyst, and Tiger Eye), anti-tarnish wires, and hand-polished charms. Located right near Chennai's iconic Tower Park, we offer custom sizing so your bracelet fits your wrist with absolute comfort.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+              <div class="p-4 bg-white rounded-xl border border-brand-border">
+                <span class="text-2xl font-serif font-bold text-brand-rose">100%</span>
+                <p class="text-xs text-brand-muted font-medium mt-1">Anti-Tarnish Coated Quality</p>
+              </div>
+              <div class="p-4 bg-white rounded-xl border border-brand-border">
+                <span class="text-2xl font-serif font-bold text-brand-rose">Bespoke</span>
+                <p class="text-xs text-brand-muted font-medium mt-1">Custom Wrist Measurements</p>
+              </div>
+              <div class="p-4 bg-white rounded-xl border border-brand-border">
+                <span class="text-2xl font-serif font-bold text-brand-rose">Gift Ready</span>
+                <p class="text-xs text-brand-muted font-medium mt-1">Eco-luxury Keepsake Boxes</p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-rose hover:text-brand-charcoal transition">
+                Find our Chennai studio & store details 
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="py-16 bg-white border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-rose block mb-2">Customer Love</span>
+          <h2 class="text-3xl font-serif font-bold text-brand-charcoal">Loved by Bracelet Lovers</h2>
+          <p class="text-sm text-brand-muted mt-2">See what our customers across Chennai and Tamil Nadu say about Elora.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-6 rounded-2xl bg-brand-cream border border-brand-border/70 space-y-4 shadow-sm">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-sm text-brand-charcoal leading-relaxed italic">
+              "Ordered the Rose Quartz Celestia bracelet. The quality is exceptional! It doesn't fade and Shalini customized the lock size perfectly for my slim wrist."
+            </p>
+            <div class="pt-2 border-t border-brand-border">
+              <p class="text-xs font-bold text-brand-charcoal">Pooja Krishnan</p>
+              <p class="text-[11px] text-brand-muted">Anna Nagar, Chennai</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-cream border border-brand-border/70 space-y-4 shadow-sm">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-sm text-brand-charcoal leading-relaxed italic">
+              "We bought the Infinite Connection couple bracelet set for our anniversary. The WhatsApp response was super fast, and delivery happened within 24 hours in Chennai!"
+            </p>
+            <div class="pt-2 border-t border-brand-border">
+              <p class="text-xs font-bold text-brand-charcoal">Karthik & Divya</p>
+              <p class="text-[11px] text-brand-muted">Mylapore, Chennai</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-cream border border-brand-border/70 space-y-4 shadow-sm">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-sm text-brand-charcoal leading-relaxed italic">
+              "The Golden Bloom cuff looks like fine gold jewelry! The box packaging is so aesthetic, made a wonderful birthday gift for my best friend."
+            </p>
+            <div class="pt-2 border-t border-brand-border">
+              <p class="text-xs font-bold text-brand-charcoal">Meenakshi S.</p>
+              <p class="text-[11px] text-brand-muted">Coimbatore</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Details & Direct Actions -->
+          <div class="lg:col-span-6 space-y-6">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-rose block mb-2">Get In Touch</span>
+              <h2 class="text-3xl font-serif font-bold text-brand-charcoal">Visit or Connect with Elora Bracelets</h2>
+              <p class="text-sm text-brand-muted mt-2">
+                Have a customized design idea, want bulk bridesmaids gifts, or want to pick up your order directly in Anna Nagar? We'd love to chat.
+              </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="space-y-4">
+              
+              <!-- Address -->
+              <div class="p-4 bg-white rounded-2xl border border-brand-border flex items-start gap-4 shadow-sm">
+                <div class="p-3 bg-brand-rose/10 text-brand-rose rounded-xl">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-brand-charcoal">Studio & Pickup Address</h3>
+                  <p class="text-xs text-brand-muted mt-1 leading-relaxed">
+                    18 K, Block, 4th Avenue, Near Tower Park,<br>
+                    Anna Nagar, Chennai, Tamil Nadu — 600040
+                  </p>
+                </div>
+              </div>
+
+              <!-- Phone & WhatsApp -->
+              <div class="p-4 bg-white rounded-2xl border border-brand-border flex items-start gap-4 shadow-sm">
+                <div class="p-3 bg-green-50 text-[#25D366] rounded-xl">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  <h3 class="text-sm font-bold text-brand-charcoal">Phone & WhatsApp Orders</h3>
+                  <p class="text-xs text-brand-muted mt-1">+91 93845 00167 (Shalini)</p>
+                  <div class="flex gap-3 mt-2">
+                    <a href="tel:+919384500167" class="text-xs font-semibold text-brand-rose hover:underline">Tap to Call</a>
+                    <span class="text-stone-300">•</span>
+                    <a href="https://wa.me/919384500167" target="_blank" class="text-xs font-semibold text-[#25D366] hover:underline">Chat on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="p-4 bg-white rounded-2xl border border-brand-border flex items-start gap-4 shadow-sm">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-brand-charcoal">Direct Email</h3>
+                  <a href="mailto:Shalini167@gmail.com" class="text-xs text-brand-rose hover:underline block mt-1">Shalini167@gmail.com</a>
+                  <p class="text-[11px] text-brand-muted mt-0.5">Replies typically within 2-4 hours</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quick WhatsApp Inquiry Form -->
+          <div class="lg:col-span-6">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-brand-border shadow-md">
+              <h3 class="text-xl font-serif font-bold text-brand-charcoal mb-1">Direct Custom Inquiry</h3>
+              <p class="text-xs text-brand-muted mb-6">Fill in your request below and click to send it directly onto WhatsApp for an instant response.</p>
+              
+              <form id="quickInquiryForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-1">Your Name</label>
+                  <input type="text" id="custName" required placeholder="e.g. Shalini Priya" 
+                         class="w-full text-sm px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:border-brand-rose transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-1">Bracelet Style Interested In</label>
+                  <select id="custStyle" class="w-full text-sm px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:border-brand-rose transition bg-white">
+                    <option value="Custom Beaded Bracelet">Custom Beaded Gemstone</option>
+                    <option value="Silver / Gold Charm Bracelet">Silver / Gold Charm Bracelet</option>
+                    <option value="Couple Matching Bracelets">Couple Matching Bracelets</option>
+                    <option value="Minimalist Rose Gold Cuff">Minimalist Cuff</option>
+                    <option value="Bulk Gift / Party Orders">Bulk Gifts / Return Gifts</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-brand-charcoal uppercase tracking-wider mb-1">Special Notes / Wrist Size / Colors</label>
+                  <textarea id="custNote" rows="3" placeholder="Tell us if you want initial letters, specific stone colors, or exact wrist circumference..." 
+                            class="w-full text-sm px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:border-brand-rose transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#1eb956] text-white font-semibold text-sm transition shadow-sm flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.312l-.744 2.716 2.79-.731a5.719 5.719 0 0 0 2.697.683h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.78-5.773-5.78zm3.385 8.232c-.14.394-.78.752-1.08.79-.292.037-.665.045-2.02-.516-1.52-.63-2.5-2.185-2.576-2.285-.075-.1-1.01-1.344-1.01-2.563 0-1.218.636-1.817.863-2.062.227-.245.495-.306.66-.306.166 0 .332.002.477.01.155.008.363-.058.568.435.21.503.715 1.745.777 1.872.062.127.104.275.02.438-.083.164-.124.267-.248.411-.124.145-.262.324-.374.436-.124.124-.253.259-.108.508.145.249.646 1.066 1.388 1.726.953.85 1.758 1.114 2.008 1.238.249.124.395.104.54-.062.145-.166.623-.726.789-.974.166-.25.332-.208.56-.124.228.083 1.453.685 1.702.81.249.125.415.187.477.291.062.104.062.602-.078.996z"/></svg>
+                  Send Inquiry on WhatsApp
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="cartModal" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-stone-900/60 backdrop-blur-xs transition-opacity" id="cartOverlay"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+        
+        <!-- Cart Header -->
+        <div class="p-6 border-b border-brand-border flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <h2 class="text-lg font-serif font-bold text-brand-charcoal">Your Bracelet Bag</h2>
+            <span id="cartDrawerCount" class="text-xs bg-stone-100 text-stone-700 px-2 py-0.5 rounded-full font-semibold">0</span>
+          </div>
+          <button id="closeCartBtn" class="p-2 text-stone-400 hover:text-stone-600 rounded-full hover:bg-stone-100">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer" class="flex-grow overflow-y-auto p-6 space-y-4">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="p-6 border-t border-brand-border bg-stone-50 space-y-4">
+          <div class="flex justify-between items-center text-sm font-semibold">
+            <span class="text-brand-muted">Estimated Total:</span>
+            <span id="cartSubtotal" class="text-lg font-bold text-brand-charcoal">₹0</span>
+          </div>
+          <p class="text-[11px] text-stone-500 leading-tight">
+            Taxes included. Instant direct checkout via WhatsApp with Shalini for payment via GPay / PhonePe / Cash on Delivery.
+          </p>
+
+          <button id="checkoutWhatsAppBtn" class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#1eb956] text-white font-semibold text-sm transition flex items-center justify-center gap-2 shadow-sm">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.312l-.744 2.716 2.79-.731a5.719 5.719 0 0 0 2.697.683h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.78-5.773-5.78zm3.385 8.232c-.14.394-.78.752-1.08.79-.292.037-.665.045-2.02-.516-1.52-.63-2.5-2.185-2.576-2.285-.075-.1-1.01-1.344-1.01-2.563 0-1.218.636-1.817.863-2.062.227-.245.495-.306.66-.306.166 0 .332.002.477.01.155.008.363-.058.568.435.21.503.715 1.745.777 1.872.062.127.104.275.02.438-.083.164-.124.267-.248.411-.124.145-.262.324-.374.436-.124.124-.253.259-.108.508.145.249.646 1.066 1.388 1.726.953.85 1.758 1.114 2.008 1.238.249.124.395.104.54-.062.145-.166.623-.726.789-.974.166-.25.332-.208.56-.124.228.083 1.453.685 1.702.81.249.125.415.187.477.291.062.104.062.602-.078.996z"/></svg>
+            Complete Order on WhatsApp
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-brand-charcoal text-brand-cream px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs font-medium">
+    <span class="text-emerald-400 text-sm">✓</span>
+    <span id="toastMsg">Added to your bag</span>
+  </div>
+
+  <footer class="bg-brand-charcoal text-stone-300 pt-16 pb-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        
+        <div class="space-y-4">
+          <span class="text-2xl font-serif font-bold text-white block">Elora Bracelets</span>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Handcrafted artisanal jewelry designed to embrace individuality and timeless elegance. Made with passion in Anna Nagar, Chennai.
+          </p>
+          <div class="pt-1">
+            <span class="text-xs font-semibold text-brand-rose">Proprietor: Shalini</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#collections" class="hover:text-brand-rose transition">Signature Collections</a></li>
+            <li><a href="#about" class="hover:text-brand-rose transition">Artisan Story & Craft</a></li>
+            <li><a href="#reviews" class="hover:text-brand-rose transition">Customer Reviews</a></li>
+            <li><a href="#contact" class="hover:text-brand-rose transition">Store & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Address</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            18 K, Block, 4th Avenue,<br>
+            Near Tower park,<br>
+            Anna nagar, Chennai - 600040,<br>
+            Tamil Nadu, India.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect With Us</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li>Call / WhatsApp: <a href="tel:+919384500167" class="text-white hover:text-brand-rose font-medium">+91 93845 00167</a></li>
+            <li>Email: <a href="mailto:Shalini167@gmail.com" class="text-white hover:text-brand-rose font-medium">Shalini167@gmail.com</a></li>
+            <li class="pt-2 text-[11px] text-stone-500">Orders packaged with bubble wrap & anti-tarnish storage pouches.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-stone-800 text-center text-xs text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Elora Bracelets. All rights reserved.</p>
+        <p>Crafted for Shalini • Anna Nagar, Chennai</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Product Catalog Data
+    const products = [
+      {
+        id: 1,
+        name: "Rose Quartz Celestia",
+        category: "beaded",
+        price: 799,
+        image: "https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=600&q=80",
+        desc: "Natural grade-A pink rose quartz beads known for unconditional love and inner calm."
+      },
+      {
+        id: 2,
+        name: "Golden Bloom Charm Cuff",
+        category: "cuffs",
+        price: 949,
+        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80",
+        desc: "18k gold-dipped brass cuff with adjustable fit and delicate floral engraving."
+      },
+      {
+        id: 3,
+        name: "Tiger Eye Courage Band",
+        category: "beaded",
+        price: 699,
+        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=600&q=80",
+        desc: "Polished golden brown tiger eye gemstones with anti-tarnish hematite accents."
+      },
+      {
+        id: 4,
+        name: "Infinite Connection Couple Set",
+        category: "couple",
+        price: 1399,
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80",
+        desc: "Set of two matching bracelets with magnetic heart charms and matte black agate."
+      },
+      {
+        id: 5,
+        name: "Ethereal Pearl & Silver Charm",
+        category: "charms",
+        price: 849,
+        image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80",
+        desc: "Cultured freshwater baroque pearl paired with sterling silver chain links."
+      },
+      {
+        id: 6,
+        name: "Midnight Amethyst Serenity",
+        category: "beaded",
+        price: 899,
+        image: "https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=600&q=80",
+        desc: "Deep violet amethyst crystal beads providing peace, focus and emotional balance."
+      },
+      {
+        id: 7,
+        name: "Whispering Leaf Rose Cuff",
+        category: "cuffs",
+        price: 899,
+        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80",
+        desc: "Rose gold finished sleek cuff with botanical leaf tips. Flexible open design."
+      },
+      {
+        id: 8,
+        name: "Sun & Moon Duo Band",
+        category: "couple",
+        price: 1299,
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80",
+        desc: "Handcrafted braided cords with engraved celestial tokens for couples."
+      }
+    ];
+
+    // Shopping Bag State
+    let cart = [];
+
+    // Render Product Grid
+    function renderProducts(items) {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = items.map(product => `
+        <div class="group bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative overflow-hidden bg-stone-100 aspect-square">
+            <img src="${product.image}" 
+                 alt="${product.name}" 
+                 onerror="this.src='https://placehold.co/600x600/FAF7F2/1E1B18?text=Elora+Bracelet'" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-brand-charcoal px-2.5 py-1 rounded-full">
+              Handcrafted
+            </span>
+          </div>
+
+          <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-serif font-bold text-base text-brand-charcoal group-hover:text-brand-rose transition">${product.name}</h3>
+              <p class="text-xs text-brand-muted mt-1 line-clamp-2 leading-relaxed">${product.desc}</p>
+            </div>
+
+            <div class="pt-3 border-t border-brand-border/60 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-brand-muted">Price</span>
+                <p class="text-base font-bold text-brand-charcoal">₹${product.price.toLocaleString('en-IN')}</p>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button onclick="addToCart(${product.id})" class="px-3.5 py-2 rounded-xl bg-brand-charcoal hover:bg-brand-rose text-white text-xs font-semibold tracking-wide transition flex items-center gap-1.5 shadow-sm">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter Logic
+    function filterProducts(category) {
+      // Update buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if(btn.dataset.category === category) {
+          btn.className = "filter-btn active px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-brand-charcoal text-white";
+        } else {
+          btn.className = "filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition bg-stone-100 text-stone-600 hover:bg-stone-200";
+        }
+      });
+
+      if (category === 'all') {
+        renderProducts(products);
+      } else {
+        const filtered = products.filter(p => p.category === category);
+        renderProducts(filtered);
+      }
+    }
+
+    // Cart Management
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const existing = cart.find(item => item.id === productId);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      updateCartUI();
+      showToast(`Added "${product.name}" to your bag!`);
+    }
+
+    function changeQty(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+      }
+      updateCartUI();
+    }
+
+    function removeItem(productId) {
+      cart = cart.filter(i => i.id !== productId);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      document.getElementById('cartCount').textContent = totalItems;
+      document.getElementById('cartDrawerCount').textContent = `${totalItems} items`;
+      document.getElementById('cartSubtotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+
+      const container = document.getElementById('cartItemsContainer');
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-16 space-y-3">
+            <svg class="w-12 h-12 text-stone-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <p class="text-sm font-medium text-stone-500">Your bag is currently empty.</p>
+            <p class="text-xs text-stone-400">Discover our handcrafted bracelets in the collection.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = cart.map(item => `
+          <div class="flex items-center gap-4 py-3 border-b border-brand-border">
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover bg-stone-100 flex-shrink-0">
+            <div class="flex-grow">
+              <h4 class="text-sm font-bold text-brand-charcoal">${item.name}</h4>
+              <p class="text-xs text-brand-rose font-semibold mt-0.5">₹${item.price} each</p>
+              <div class="flex items-center gap-2 mt-2">
+                <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 rounded-md bg-stone-100 text-stone-700 flex items-center justify-center text-xs font-bold hover:bg-stone-200">-</button>
+                <span class="text-xs font-bold px-2">${item.qty}</span>
+                <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 rounded-md bg-stone-100 text-stone-700 flex items-center justify-center text-xs font-bold hover:bg-stone-200">+</button>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-sm font-bold text-brand-charcoal">₹${(item.price * item.qty).toLocaleString('en-IN')}</span>
+              <button onclick="removeItem(${item.id})" class="block text-[11px] text-red-500 hover:underline mt-2">Remove</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Toast Alert
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = msg;
+      toast.classList.remove('opacity-0', 'translate-y-20');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-20');
+      }, 2500);
+    }
+
+    // WhatsApp Checkout Integration
+    document.getElementById('checkoutWhatsAppBtn').addEventListener('click', () => {
+      if (cart.length === 0) {
+        showToast('Please add items to your bag first!');
+        return;
+      }
+
+      let message = `*✨ NEW ORDER INQUIRY - ELORA BRACELETS ✨*\n`;
+      message += `--------------------------------------\n`;
+      let total = 0;
+
+      cart.forEach((item, idx) => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+        message += `${idx + 1}. ${item.name} (x${item.qty}) - ₹${itemTotal}\n`;
+      });
+
+      message += `--------------------------------------\n`;
+      message += `*Total Order Value: ₹${total}*\n\n`;
+      message += `Hi Shalini, I would like to place this order from your website! Please confirm product availability and payment details. Thank you!`;
+
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/919384500167?text=${encoded}`, '_blank');
+    });
+
+    // Custom WhatsApp Form Inquiry
+    document.getElementById('quickInquiryForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('custName').value.trim();
+      const style = document.getElementById('custStyle').value;
+      const note = document.getElementById('custNote').value.trim();
+
+      let msg = `*✨ CUSTOM INQUIRY - ELORA BRACELETS ✨*\n`;
+      msg += `Name: ${name}\n`;
+      msg += `Selected Style: ${style}\n`;
+      if (note) msg += `Notes/Wrist Size: ${note}\n`;
+      msg += `\nHello Shalini, please assist me with this customized bracelet requirement!`;
+
+      window.open(`https://wa.me/919384500167?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+
+    // UI Event Listeners for Cart Drawer & Mobile Menu
+    const cartModal = document.getElementById('cartModal');
+    const cartBtn = document.getElementById('cartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function openCart() {
+      cartModal.classList.remove('hidden');
+    }
+    function closeCart() {
+      cartModal.classList.add('hidden');
+    }
+
+    cartBtn.addEventListener('click', openCart);
+    closeCartBtn.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Initial load
+    renderProducts(products);
+    updateCartUI();
+  </script>
+</body>
+</html>
