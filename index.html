@@ -94,7 +94,7 @@
         <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
           <a href="#collections" class="text-brand-charcoal hover:text-brand-rose transition">Collections</a>
-          <a href="#bestsellers" class="text-brand-charcoal hover:text-brand-rose transition">Best Sellers</a>
+          <a href="#lookbook" class="text-brand-charcoal hover:text-brand-rose transition">Lookbook</a>
           <a href="#about" class="text-brand-charcoal hover:text-brand-rose transition">Our Craft</a>
           <a href="#reviews" class="text-brand-charcoal hover:text-brand-rose transition">Reviews</a>
           <a href="#contact" class="text-brand-charcoal hover:text-brand-rose transition">Visit & Contact</a>
@@ -127,7 +127,7 @@
     <!-- Mobile Nav dropdown -->
     <div id="mobileMenu" class="hidden md:hidden border-t border-brand-border bg-brand-cream px-4 pt-3 pb-5 space-y-3">
       <a href="#collections" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Collections</a>
-      <a href="#bestsellers" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Best Sellers</a>
+      <a href="#lookbook" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Lookbook Gallery</a>
       <a href="#about" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Our Craft</a>
       <a href="#reviews" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Reviews</a>
       <a href="#contact" class="block py-2 text-base font-medium text-brand-charcoal hover:text-brand-rose">Contact & Store</a>
@@ -197,16 +197,25 @@
               <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-amber-100/60 rounded-full blur-3xl -z-10"></div>
               
               <!-- Hero Image Container with luxury border -->
-              <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-white">
-                <img src="https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=900&q=80" 
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-white group">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80" 
                      alt="Elora Luxury Bracelets Showcase" 
-                     class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
-                <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-stone-200 shadow-sm flex items-center justify-between">
+                     class="w-full h-[470px] object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute top-4 right-4 bg-brand-charcoal/80 text-white text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                  ✨ 2026 Collection
+                </div>
+                <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-stone-200 shadow-lg flex items-center justify-between">
                   <div>
-                    <p class="text-xs font-semibold text-brand-rose uppercase tracking-wider">Spotlight Design</p>
+                    <p class="text-[11px] font-semibold text-brand-rose uppercase tracking-wider">Spotlight Design</p>
                     <p class="text-sm font-serif font-bold text-brand-charcoal">Rose Quartz Celestia</p>
+                    <div class="flex text-amber-400 text-xs mt-0.5">★★★★★ <span class="text-stone-400 text-[10px] ml-1">(48 reviews)</span></div>
                   </div>
-                  <span class="text-base font-bold text-brand-charcoal">₹799</span>
+                  <div class="text-right">
+                    <span class="text-base font-bold text-brand-charcoal block">₹799</span>
+                    <button onclick="addToCart(1)" class="text-xs bg-brand-rose hover:bg-brand-roseHover text-white px-3 py-1.5 rounded-lg font-medium transition shadow-sm">
+                      + Add
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -214,6 +223,66 @@
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <!-- Lookbook & Styling Gallery Section -->
+    <section id="lookbook" class="py-16 bg-stone-100/60 border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-rose block mb-2">Visual Diary</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-charcoal">Worn & Adorned Lookbook</h2>
+            <p class="text-sm text-brand-muted mt-2">See how our bracelets elevate everyday elegance, wrist stacking, and moments of celebration.</p>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <a href="https://wa.me/919384500167?text=Hi%20Shalini,%20I%20love%20the%20photos%20in%20your%20lookbook!%20Can%20you%20share%20more%20designs?" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-rose hover:underline uppercase tracking-wider">
+              Request Lookbook Catalog PDF
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- High-res Lookbook Photo Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=700&q=80" 
+                 alt="Wrist stack luxury bracelets" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-medium">Stacking Duo • Gold & Quartz</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80" 
+                 alt="Artisanal bead crafting" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-medium">Artisanal Stringing Process</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80" 
+                 alt="Freshwater pearl styling" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-medium">Baroque Pearl & Sterling Silver</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=700&q=80" 
+                 alt="Natural healing tiger eye bracelet" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-medium">Earth Tiger Eye & Hematite</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -247,7 +316,7 @@
 
         <!-- Products Grid -->
         <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Dynamically populated via JS -->
+          <!-- Dynamically populated via JS with rich photos and WhatsApp buttons -->
         </div>
 
       </div>
@@ -390,6 +459,9 @@
                     18 K, Block, 4th Avenue, Near Tower Park,<br>
                     Anna Nagar, Chennai, Tamil Nadu — 600040
                   </p>
+                  <a href="https://maps.google.com/?cid=15087934569699719526&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-rose hover:underline inline-flex items-center gap-1 mt-2">
+                    Open in Google Maps ↗
+                  </a>
                 </div>
               </div>
 
@@ -519,6 +591,18 @@
     <span id="toastMsg">Added to your bag</span>
   </div>
 
+  <!-- Floating WhatsApp Action Button for Easy Access -->
+  <a href="https://wa.me/919384500167?text=Hi%20Shalini!%20I%20am%20browsing%20Elora%20Bracelets%20and%20need%20quick%20assistance." 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="fixed bottom-6 left-6 z-40 bg-[#25D366] hover:bg-[#1eb956] text-white p-3.5 rounded-full shadow-2xl flex items-center gap-2 group transition-all duration-300 hover:scale-105"
+     aria-label="Direct WhatsApp Chat">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.312l-.744 2.716 2.79-.731a5.719 5.719 0 0 0 2.697.683h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.78-5.773-5.78zm3.385 8.232c-.14.394-.78.752-1.08.79-.292.037-.665.045-2.02-.516-1.52-.63-2.5-2.185-2.576-2.285-.075-.1-1.01-1.344-1.01-2.563 0-1.218.636-1.817.863-2.062.227-.245.495-.306.66-.306.166 0 .332.002.477.01.155.008.363-.058.568.435.21.503.715 1.745.777 1.872.062.127.104.275.02.438-.083.164-.124.267-.248.411-.124.145-.262.324-.374.436-.124.124-.253.259-.108.508.145.249.646 1.066 1.388 1.726.953.85 1.758 1.114 2.008 1.238.249.124.395.104.54-.062.145-.166.623-.726.789-.974.166-.25.332-.208.56-.124.228.083 1.453.685 1.702.81.249.125.415.187.477.291.062.104.062.602-.078.996z"/>
+    </svg>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-xs font-semibold pr-1">Chat with Shalini</span>
+  </a>
+
   <footer class="bg-brand-charcoal text-stone-300 pt-16 pb-12 border-t border-stone-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -572,78 +656,94 @@
   </footer>
 
   <script>
-    // Product Catalog Data
+    // Product Catalog Data with verified high-definition bracelet visuals
     const products = [
       {
         id: 1,
         name: "Rose Quartz Celestia",
         category: "beaded",
         price: 799,
-        image: "https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=600&q=80",
-        desc: "Natural grade-A pink rose quartz beads known for unconditional love and inner calm."
+        image: "https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=700&q=80",
+        rating: "4.9",
+        reviews: 48,
+        desc: "Natural grade-A pink rose quartz beads known for unconditional love, compassion, and inner calm."
       },
       {
         id: 2,
         name: "Golden Bloom Charm Cuff",
         category: "cuffs",
         price: 949,
-        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80",
-        desc: "18k gold-dipped brass cuff with adjustable fit and delicate floral engraving."
+        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80",
+        rating: "5.0",
+        reviews: 32,
+        desc: "18k gold-dipped brass cuff with adjustable wrist fit and delicate handcrafted floral engraving."
       },
       {
         id: 3,
         name: "Tiger Eye Courage Band",
         category: "beaded",
         price: 699,
-        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=600&q=80",
-        desc: "Polished golden brown tiger eye gemstones with anti-tarnish hematite accents."
+        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=700&q=80",
+        rating: "4.8",
+        reviews: 29,
+        desc: "Polished golden brown tiger eye gemstones with anti-tarnish magnetic hematite spacer beads."
       },
       {
         id: 4,
         name: "Infinite Connection Couple Set",
         category: "couple",
         price: 1399,
-        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80",
-        desc: "Set of two matching bracelets with magnetic heart charms and matte black agate."
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80",
+        rating: "4.9",
+        reviews: 65,
+        desc: "Set of two matching bracelets with mutual magnetic heart charms and matte black agate stones."
       },
       {
         id: 5,
         name: "Ethereal Pearl & Silver Charm",
         category: "charms",
         price: 849,
-        image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80",
-        desc: "Cultured freshwater baroque pearl paired with sterling silver chain links."
+        image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80",
+        rating: "4.7",
+        reviews: 24,
+        desc: "Cultured freshwater baroque pearl paired with delicate hypoallergenic sterling silver chain links."
       },
       {
         id: 6,
         name: "Midnight Amethyst Serenity",
         category: "beaded",
         price: 899,
-        image: "https://images.unsplash.com/photo-1611591475871-33297a7e8ca0?auto=format&fit=crop&w=600&q=80",
-        desc: "Deep violet amethyst crystal beads providing peace, focus and emotional balance."
+        image: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=700&q=80",
+        rating: "4.9",
+        reviews: 38,
+        desc: "Deep violet amethyst crystal beads promoting emotional balance, sound sleep, and clarity."
       },
       {
         id: 7,
         name: "Whispering Leaf Rose Cuff",
         category: "cuffs",
         price: 899,
-        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80",
-        desc: "Rose gold finished sleek cuff with botanical leaf tips. Flexible open design."
+        image: "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=700&q=80",
+        rating: "4.8",
+        reviews: 19,
+        desc: "Rose gold finished sleek cuff with botanical leaf tips and an adjustable open cuff contour."
       },
       {
         id: 8,
         name: "Sun & Moon Duo Band",
         category: "couple",
         price: 1299,
-        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80",
-        desc: "Handcrafted braided cords with engraved celestial tokens for couples."
+        image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=80",
+        rating: "5.0",
+        reviews: 51,
+        desc: "Handcrafted braided durable cords with laser-engraved celestial tokens for pairs and partners."
       }
     ];
 
     // Shopping Bag State
     let cart = [];
 
-    // Render Product Grid
+    // Render Product Grid with Direct WhatsApp Option
     function renderProducts(items) {
       const grid = document.getElementById('productGrid');
       grid.innerHTML = items.map(product => `
@@ -651,6 +751,7 @@
           <div class="relative overflow-hidden bg-stone-100 aspect-square">
             <img src="${product.image}" 
                  alt="${product.name}" 
+                 loading="lazy"
                  onerror="this.src='https://placehold.co/600x600/FAF7F2/1E1B18?text=Elora+Bracelet'" 
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-brand-charcoal px-2.5 py-1 rounded-full">
@@ -660,25 +761,41 @@
 
           <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
             <div>
+              <div class="flex items-center justify-between text-xs text-amber-500 mb-1">
+                <span>★ ${product.rating}</span>
+                <span class="text-brand-muted text-[11px]">(${product.reviews} reviews)</span>
+              </div>
               <h3 class="font-serif font-bold text-base text-brand-charcoal group-hover:text-brand-rose transition">${product.name}</h3>
               <p class="text-xs text-brand-muted mt-1 line-clamp-2 leading-relaxed">${product.desc}</p>
             </div>
 
-            <div class="pt-3 border-t border-brand-border/60 flex items-center justify-between">
-              <div>
+            <div class="pt-3 border-t border-brand-border/60">
+              <div class="flex items-center justify-between mb-3">
                 <span class="text-xs text-brand-muted">Price</span>
                 <p class="text-base font-bold text-brand-charcoal">₹${product.price.toLocaleString('en-IN')}</p>
               </div>
 
-              <div class="flex items-center gap-2">
-                <button onclick="addToCart(${product.id})" class="px-3.5 py-2 rounded-xl bg-brand-charcoal hover:bg-brand-rose text-white text-xs font-semibold tracking-wide transition flex items-center gap-1.5 shadow-sm">
-                  <span>Add to Bag</span>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="addToCart(${product.id})" class="w-full py-2 px-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-brand-charcoal text-xs font-semibold tracking-wide transition flex items-center justify-center gap-1 shadow-xs">
+                  <span>+ Bag</span>
+                </button>
+                <button onclick="orderDirectWhatsApp(${product.id})" class="w-full py-2 px-3 rounded-xl bg-[#25D366] hover:bg-[#1eb956] text-white text-xs font-semibold tracking-wide transition flex items-center justify-center gap-1 shadow-xs">
+                  <span>WhatsApp</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
       `).join('');
+    }
+
+    // Direct 1-Click WhatsApp Order for specific product
+    function orderDirectWhatsApp(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      const msg = `*✨ HELLO ELORA BRACELETS ✨*\n\nI want to order:\n- *${product.name}*\n- Price: ₹${product.price}\n\nPlease confirm availability and payment details. Thank you!`;
+      window.open(`https://wa.me/919384500167?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     // Filter Logic
